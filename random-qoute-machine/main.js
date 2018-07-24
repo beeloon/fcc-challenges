@@ -6,21 +6,23 @@ const fetchQuotes = () => {
     .then(res => res.json())
     .then(data => {
       quotes.push(...data.quotes);
-      showNewQuote(quotes);
+      showNewQuote();
     });
 }
 
 const button = document.querySelector(".new-quote-btn");
 const tweetBtn = document.querySelector(".tweet-btn");
-let randomQuote;
+let randomQuote, prevQuote = "";
 
 const getRandomQuote = quotes => quotes[Math.floor(Math.random() * quotes.length)];
-const showNewQuote = (quotes) => {
+const checkNewQuote = randomQuote => prevQuote.quote === randomQuote.quote ? showNewQuote() : prevQuote = randomQuote;
+const showNewQuote = () => {
   const quoteText = document.querySelector(".quote-text");
   const quoteAuthor = document.querySelector(".quote-author");
-  
+
   randomQuote = getRandomQuote(quotes);
-  
+  checkNewQuote(randomQuote);
+
   quoteText.textContent = randomQuote.quote;
   quoteAuthor.textContent = `- ${randomQuote.author}`;
 };
@@ -31,5 +33,5 @@ const tweetQuote = () => {
 }
 
 window.onload = () => fetchQuotes();
-button.addEventListener("click", () => showNewQuote(quotes));
-tweetBtn.addEventListener("click",tweetQuote);
+button.addEventListener("click", showNewQuote);
+tweetBtn.addEventListener("click", tweetQuote);
