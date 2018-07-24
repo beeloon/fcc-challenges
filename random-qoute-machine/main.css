@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #03a9f445;
+}
+
+.quote-container {
+  padding: 20px 15px;
+  width: 30%;
+  background-color: #fff;
+}
+
+.quote-text {
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.quote-author {
+  margin-bottom: 15px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: .75s background-color;
+  background-color: #00aced;
+}
+
+.btn:hover {
+  background-color: #bb0000;
+  opacity: .7;
+}
+
+.tweet-btn {
+  font-size: 0px;
+  width: 18px;  
+  height: 18px;
+}
+
