@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drum machine</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="drum-pad-machine">
+    <div class="drum-pad-table"></div>
+    <div class="drum-pad-controls">
+      <div class="drum-pad-power">
+        <label>
+          Power:
+          <input class="power-toggle-btn" type="checkbox" checked>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div class="drum-pad-display">Tap some key</div>
+      <div class="drum-pad-bank">
+        <label>
+          Bank:
+          <input class="bank-toggle-btn" type="checkbox">
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/bankData.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
